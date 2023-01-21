@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 import os
+import django_heroku
 
 from pathlib import Path
 
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'expenses'
 ]
 
@@ -126,6 +128,7 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'expenseswebsite/static')]
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
+django_heroku.settings(locals())
 
 MESSAGE_TAGS={
     messages.ERROR: 'danger'
