@@ -15,7 +15,9 @@
           <h4>Register for a free account</h4>
         </div>
         <form action="" method="post">
-        
+          {% csrf_token %}
+
+          {% include 'partials/_messages.html' %}
           <div class="form-group">
             <input
               type="text"
@@ -29,7 +31,7 @@
           <div class="invalid_feedback invalid-feedback" style="display:none">
           </div>
           <p class="text-sm text-success usernameSuccessOutput"></p>
-          <div class="form-group py-3">
+          <div class="form-group">
             <input
               type="email"
               name="email"
