@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'expenses'
+    'expenses',
+    'userpreferences'
 ]
 
 MIDDLEWARE = [
@@ -83,7 +84,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'incomeexpensesdb',
         'USER': 'postgres',
-        'PASSWORD': '',
+        'PASSWORD': 'Dulara2001#',
         'HOST': 'localhost',
         'PORT': 5432     
     }
